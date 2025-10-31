@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rally Car Selection</title>
+</head>
+<body>
+
+  <h1>Rally Car Selection</h1>
+
+  <p>
+    Welcome to the Rally Car Selection Challenge! Here, you can explore some of the most exciting rally cars and choose your favorite one from the list below.
+  </p>
+
+  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwPU88LG_2hXJ9vAZj3toRK5IiBE-2JQCwTcHR7P4xbO_7LPl0gM-uODhbUc27dNx-obOS"
+       alt="Rally Car" width="400">
+
+  <h2>Steps to Begin Your Rally</h2>
+  <ol>
+    <li>Look at the rally cars.</li>
+    <li>Read about their features below.</li>
+    <li>Choose your favorite rally car from the dropdown menu.</li>
+    <li>Press “Submit Choice” to see who drives it!</li>
+    <li>Get ready to race!</li>
+  </ol>
+   
+  <h3>Rally Car Gallery</h3>
+
+  <h4>Subaru WRX STI</h4>
+  <img src="https://s.yimg.com/ny/api/res/1.2/YebFhLfyfXq.ge6JUJ3DTQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTU3Ng--/https://media.zenfs.com/vi/lian-car.com.tw/3ecaedb9f4df1ed1fbdd703132c6d5e7"
+       alt="Subaru WRX STI" width="300">
+  <ul>
+    <li>Turbocharged 2.0L flat-four engine.</li>
+    <li>Legendary all-wheel-drive system.</li>
+    <li>Iconic blue and gold rally livery.</li>
+    <li>Strong handling and cornering grip.</li>
+    <li>Famous for its success in WRC history.</li>
+  </ul>
+
+  <h4>Ford Fiesta WRC</h4>
+  <img src="https://i.ytimg.com/vi/43qrdMHxcyM/maxresdefault.jpg"
+       alt="Ford Fiesta WRC" width="300">
+  <ul>
+    <li>1.6L EcoBoost turbocharged engine.</li>
+    <li>Developed by M-Sport in the UK.</li>
+    <li>Lightweight carbon-fiber body panels.</li>
+    <li>Known for quick acceleration and agility.</li>
+    <li>Frequently seen in WRC podium finishes.</li>
+  </ul>
+
+  <h4>Toyota Yaris GR</h4>
+  <img src="https://www.topgear.com/sites/default/files/2023/01/1_0.jpg"
+       alt="Toyota Yaris GR" width="300">
+  <ul>
+    <li>Based on Toyota’s WRC-winning design.</li>
+    <li>Powered by a 1.6L 3-cylinder turbo engine.</li>
+    <li>Uses Toyota’s GR-Four AWD system.</li>
+    <li>Compact yet extremely powerful for its size.</li>
+    <li>Praised for precise handling and reliability.</li>
+  </ul>
+
+  <h4>Hyundai i20 Coupe WRC</h4>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Oliver_at_the_2021_Arctic_Rally.jpg"
+       alt="Hyundai i20 Coupe WRC" width="300">
+  <ul>
+    <li>Turbocharged 1.6L inline-four engine.</li>
+    <li>Features advanced aerodynamics.</li>
+    <li>Developed by Hyundai Motorsport in Germany.</li>
+    <li>Highly competitive in modern WRC events.</li>
+    <li>Noted for stability at high speeds.</li>
+  </ul>
+
+  <h4>Citroën C3 WRC</h4>
+  <img src="https://cdn-6.motorsport.com/images/amp/6n949mOY/s1000/esapekka-lappi-janne-ferm-citr.jpg"
+       alt="Citroen C3 WRC" width="300">
+  <ul>
+    <li>Built for high-downforce performance.</li>
+    <li>Turbocharged 1.6L direct-injection engine.</li>
+    <li>Lightweight chassis and powerful braking system.</li>
+    <li>Efficient suspension for mixed terrain.</li>
+    <li>Strong legacy in World Rally Championship.</li>
+  </ul>
+
+  <a href="https://www.wrc.com" target="_blank">Learn more about Rally Racing</a><br><br>
+
+  <form onsubmit="showDriver(); return false;">
+    <label for="rallycars">Choose Your Rally Car:</label><br>
+    <select id="rallycars" name="rallycars">
+      <option value="">--Select a Car--</option>
+      <option value="subaru">Subaru WRX STI</option>
+      <option value="ford">Ford Fiesta WRC</option>
+      <option value="toyota">Toyota Yaris GR</option>
+      <option value="hyundai">Hyundai i20 Coupe WRC</option>
+      <option value="citroen">Citroën C3 WRC</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit Choice"><br><br>
+  </form>
+
+  <p id="driver" style="font-weight: bold;"></p>
+
+  <script>
+    function showDriver() {
+      var car = document.getElementById("rallycars").value;
+      var driver = "";
+
+      if (car === "subaru") driver = "Driver: Colin McRae";
+      else if (car === "ford") driver = "Driver: Ott Tänak";
+      else if (car === "toyota") driver = "Driver: Sébastien Ogier";
+      else if (car === "hyundai") driver = "Driver: Thierry Neuville";
+      else if (car === "citroen") driver = "Driver: Kris Meeke";
+      else driver = "Please select a rally car.";
+
+      document.getElementById("driver").textContent = driver;
+    }
+  </script>
+
+</body>
+</html>
